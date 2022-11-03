@@ -10,7 +10,7 @@
 <div align="center"><a href="https://github.com/ilhancuvelek">İlhan Cüvelek</a></div></br>
 <div align="center"><a href="https://github.com/mahmutgazialtun">Mahmut Gazi ALTUN</a></div></br>
 
-# <h1 align="center">:muscle: SWOT Analysis</h1>
+<h1 align="center">:muscle: SWOT Analysis</h1>
 <p align="center">
 <img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-1/SWOT-Diagram.jpeg"/>
 </p>
