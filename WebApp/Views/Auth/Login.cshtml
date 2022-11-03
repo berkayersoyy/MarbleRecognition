@@ -1,0 +1,61 @@
+@model UserLoginViewModel 
+@{ Layout = "_Layout"; } 
+<div class="center-wrapper">
+  <div class="center-content">
+    <div class="top-text-wrapper">
+      <h2 class="top-text-first">
+        <span style="color: var(--main-dodger-blue)">Oppio</span>’e hoşgeldiniz
+      </h2>
+      <h3 class="top-text-second">Giriş yap.</h3>
+    </div>
+    <form id="login-form" asp-action="Login" asp-controller="Auth" method="post">
+      <div class="content-wrapper">
+        <div class="input-area-wrapper">
+          <div style="margin-bottom: 20px;margin-top: 20px;color: var(--main-stawberry)">
+            @Html.ValidationMessage("Login")
+          </div>
+          <div class="input-wrapper">
+            <div class="input-content-wrapper">
+              <div class="image-wrapper">
+                <img src="~/images/login-register-email.svg" alt="email" class="login-register-image">
+              </div>
+              <input id="email" asp-for="Email" type="text" class="login-register-input" placeholder="Eposta Adresiniz">
+            </div>
+          </div>
+          <span class="error-message" for="email"></span>
+          <div class="input-wrapper">
+            <div class="input-content-wrapper">
+              <div class="image-wrapper">
+                <img src="~/images/password.svg" alt="password" class="login-register-image">
+              </div>
+              <input id="password" asp-for="Password" type="password" class="login-register-input" placeholder="Şifreniz">
+            </div>
+          </div>
+          <span class="error-message" for="password"></span>
+        </div>
+        <div class="terms-wrapper" style="justify-content: space-between;width: auto;">
+          <div style="display: flex;align-items: center;">
+            <input asp-for="RememberMe" type="checkbox" class="terms-checkbox ignore">
+            <p class="terms-text">
+              Beni hatırla
+            </p>
+          </div>
+          <div>
+            <a href="/forgot-password" class="forgot-password">
+              Şifreni mi unuttun?
+            </a>
+          </div>
+        </div>
+        <button type="submit" class="register-login-button">
+          <p class="register-login-button-text">Giriş Yap</p>
+        </button>
+        <div class="register-login-bottom-content">
+          <p class="register-login-bottom-content-first-text">Hesabınız yok mu?</p>
+          <a asp-action="Register" asp-controller="Auth" class="register-login-bottom-content-second-text">Kayıt Ol</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript" src="~/js/login.js"></script>
+<script type="text/javascript" src="~/js/loginFormValidation.js"></script>

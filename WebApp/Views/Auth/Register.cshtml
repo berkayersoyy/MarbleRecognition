@@ -1,0 +1,69 @@
+@model UserRegisterViewModel 
+@{ Layout = "_Layout"; } 
+<div class="center-wrapper">
+  <div class="center-content">
+    <div class="top-text-wrapper">
+      <h2 class="top-text-first">
+        <span style="color: var(--main-dodger-blue)">Oppio</span>’e hoşgeldiniz
+      </h2>
+      <h3 class="top-text-second">Hesap oluştur.</h3>
+    </div>
+    <form id="register-form" asp-action="Register" asp-controller="Auth" method="post">
+      <div class="content-wrapper">
+        <div class="input-area-wrapper">
+          <div class="input-wrapper">
+            <div class="input-content-wrapper">
+              <div class="image-wrapper">
+                <img src="~/images/nickname-logo.svg" alt="nickname" class="login-register-image">
+              </div>
+              <input id="register-nickname" asp-for="Nickname" type="text" class="login-register-input" placeholder="Kullanıcı Adı">
+            </div>
+          </div>
+          <span class="error-message" for="register-nickname"></span>
+          <div class="input-wrapper">
+            <div class="input-content-wrapper">
+              <div class="image-wrapper">
+                <img src="~/images/login-register-email.svg" alt="email" class="login-register-image">
+              </div>
+              <input id="register-email" asp-for="Email" type="text" class="login-register-input" placeholder="Eposta Adresiniz">
+            </div>
+          </div>
+          <span class="error-message" for="register-email"></span>
+          <div class="input-wrapper">
+            <div class="input-content-wrapper">
+              <div class="image-wrapper">
+                <img src="~/images/password.svg" alt="password" class="login-register-image">
+              </div>
+              <input id="register-password" asp-for="Password" type="password" class="login-register-input" placeholder="Şifreniz">
+            </div>
+          </div>
+          <span class="error-message" for="register-password"></span>
+          <div class="input-wrapper">
+            <div class="input-content-wrapper">
+              <div class="image-wrapper">
+                <img src="~/images/password.svg" alt="password" class="login-register-image">
+              </div>
+              <input id="register-password-confirmation" asp-for="PasswordConfirmation" type="password" class="login-register-input" placeholder="Şifrenizi Onaylayın">
+            </div>
+          </div>
+          <span class="error-message" for="register-password-confirmation"></span>
+        </div>
+        <div class="terms-wrapper">
+          <input asp-for="Terms" type="checkbox" class="terms-checkbox">
+          <p class="terms-text">
+            <a style="color: var(--main-dodger-blue);cursor: pointer">Kullanım Koşulları</a> ile tüm beyanları kabul ediyorum
+          </p>
+        </div>
+        <button type="submit" class="register-login-button">
+          <p class="register-login-button-text">Kayıt Ol</p>
+        </button>
+        <div class="register-login-bottom-content">
+          <p class="register-login-bottom-content-first-text">Zaten mevcut bir hesabınız var mı?</p>
+          <a asp-action="Login" asp-controller="Auth" class="register-login-bottom-content-second-text">Giriş Yap</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript" src="~/js/register.js"></script>
+<script type="text/javascript" src="~/js/registerFormValidation.js"></script>

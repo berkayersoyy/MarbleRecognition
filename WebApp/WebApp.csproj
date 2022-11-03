@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Business\Business.csproj" />
+      <ProjectReference Include="..\Core\Core.csproj" />
+      <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Autofac" Version="6.4.0" />
+      <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.9" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\plugins" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Admin\AddCategory.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\AddCity.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\AddEducation.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\AddEmployment.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\AddIncomeStatus.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\AddMarialStatus.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\AddNationality.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\AddPage.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\AddPost.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\AddSex.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Categories.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Cities.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Contacts.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Educations.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Employments.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\IncomeStatuses.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\MarialStatuses.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Nationalities.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Pages.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Posts.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Reports.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Sexes.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\UpdateCategory.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\UpdateCity.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\UpdateEducation.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\UpdateEmployment.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\UpdateIncomeStatus.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\UpdateMarialStatus.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\UpdateNationality.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\UpdatePage.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\UpdatePost.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\UpdateSex.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Admin\Users.cshtml" />
+    </ItemGroup>
+
+</Project>
