@@ -3,5 +3,5 @@
 
 # :family: Our Team
 <p align="center">
-![alt text](https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-1/Team-Diagram.jpeg)
+<img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-1/Team-Diagram.jpeg"/>
 </p>
