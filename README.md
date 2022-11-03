@@ -1,6 +1,6 @@
 # Marble Recognition
 
-<a href="https://github.com/ilhancuvelek/marble_surface_detection">Marble Surface Dedection</a>
+<a href="https://github.com/ilhancuvelek/marble_surface_detection">Marble Surface Dedection</a>&nbsp;&nbsp;&nbsp;&nbsp;
 <a style="margin-left:20px;" href="https://github.com/ilhancuvelek/marble_color_detection">Marble Color Dedection</a> 
 
 <h1 align="center">:family: Our Team</h1>
