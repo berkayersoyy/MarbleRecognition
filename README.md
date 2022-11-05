@@ -5,7 +5,7 @@
 
 <h1 align="center">:family: Our Team</h1>
 <p align="center">
-<img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-1/Team-Diagram.jpeg"/>
+<img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-1/Team-Diagram2.jpeg"/>
 </p>
 <div align="center"><a href="https://github.com/berkayersoyy">Resul Berkay ERSOY</a></div></br>
 <div align="center"><a href="https://github.com/smybayrktr">Sümeyye BAYRAKTAR</a></div></br>
