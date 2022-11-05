@@ -1,4 +1,4 @@
-<h1 align="center">:family: TRL 1 - Sprint Week 1</h1>
+<h1 align="center">TRL 1 - Sprint Week 1</h1>
 
 
 <h1 align="center">:family: Our Team</h1>
