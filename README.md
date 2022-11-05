@@ -28,4 +28,9 @@ You can review the dataset we used in the training and the models we trained in 
 Resul Berkay Ersoy - API, Github and Trello Management <br>
 Sümeyye BAYRAKTAR - Web Design and Website Management <br>
 İlhan CÜVELEK - AI, Coding <br>
-Mahmut Gazi ALTUN - AI, Research and Information Gathering
+Mahmut Gazi ALTUN - AI, Research and Information Gathering<br>
+
+<h1 align="center">:chart_with_downwards_trend: Diagrams</h1>
+
+  <div align="center"><img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-4/uml-1.jpeg"/></div>
+  <div align="center"><img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-4/uml-2.jpeg"/></div>
