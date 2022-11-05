@@ -17,3 +17,11 @@
 <img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-1/SWOT-Diagram.jpeg"/>
 </p>
 <h2 align="center">“Be so good they can't ignore you.” - Steve Martin</h2>
+
+<h1 align="center">TRL 2 - Sprint Week 2</h1>
+
+<h1 align="center">:bookmark_tabs: ROLES</h1>
+Resul Berkay Ersoy - API, Github and Trello Management <br>
+Sümeyye BAYRAKTAR - Web Design and Website Management <br>
+İlhan CÜVELEK - AI, Coding <br>
+Mahmut Gazi ALTUN - AI, Research and Information Gathering
