@@ -9,6 +9,7 @@
 <div align="center"><a href="https://github.com/smybayrktr">Sümeyye BAYRAKTAR</a></div></br>
 <div align="center"><a href="https://github.com/ilhancuvelek">İlhan Cüvelek</a></div></br>
 <div align="center"><a href="https://github.com/mahmutgazialtun">Mahmut Gazi ALTUN</a></div></br>
+<div align="center"><a href="https://github.com/hakantancan">Hakan TANCAN</a></div></br>
 
 <h1 align="center">:muscle: SWOT Analysis</h1>
 <p align="center">
