@@ -37,3 +37,14 @@ Hakan TANCAN - AI, Research and Information Gathering<br>
 
   <div align="center"><img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-4/uml-1.jpeg"/></div>
   <div align="center"><img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-4/uml-2.jpeg"/></div>
+  
+<h1 align="center">:statue_of_liberty: High Level Architecture</h1>
+
+  <div align="center"><img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-5/high-level-architecture.png"/>
+</div>
+    
+<h1 align="center">:fire: Releases</h1>
+
+ <div align="center"><a href="https://github.com/berkayersoyy/MarbleRecognition/releases/tag/v0.0.1">v0.0.1</a></div></br>
+ <div align="center"><a href="https://github.com/berkayersoyy/MarbleRecognition/releases/tag/v0.0.2">v0.0.2</a></div></br>
+
