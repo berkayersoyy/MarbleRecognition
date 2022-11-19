@@ -11,7 +11,7 @@ You can review the dataset we used in the training and the models we trained in 
 
 <h1 align="center">:family: Our Team</h1>
 <p align="center">
-<img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-1/Team-Diagram2.jpg"/>
+<img src="https://github.com/berkayersoyy/MarbleRecognition/blob/main/TRL-1/Team-Diagram3.jpg"/>
 </p>
 <div align="center"><a href="https://github.com/berkayersoyy">Resul Berkay ERSOY</a></div></br>
 <div align="center"><a href="https://github.com/smybayrktr">Sümeyye BAYRAKTAR</a></div></br>
