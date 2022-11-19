@@ -57,7 +57,7 @@ public class AuthController : Controller
     {
         return View();
     }
-    [Route("sregisterignup")]
+    [Route("register")]
     [HttpPost]
     public async Task<IActionResult> Register(UserRegisterViewModel userRegisterViewModel)
     {
