@@ -13,6 +13,9 @@ namespace Business.DependencyResolvers.Autofac
     {
         protected override void Load(ContainerBuilder builder)
         {
+            builder.RegisterType<MarbleManager>().As<IMarbleService>();
+            builder.RegisterType<EfMarbleRepository>().As<IMarbleRepository>();
+            
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserRepository>().As<IUserRepository>();
             

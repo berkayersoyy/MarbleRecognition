@@ -15,17 +15,13 @@
 })
 
 function showRegisterPopup(){
-    let body = document.body,
-        html = document.documentElement;
-    let height = Math.max( body.scrollHeight, body.offsetHeight,
-        html.clientHeight, html.scrollHeight, html.offsetHeight );
-    document.getElementById("register-popup-background").style.height=height+"px";
-    document.getElementById("register-popup-background").style.display="block";
+    document.getElementById("popup-background").style.height=height+"px";
+    document.getElementById("popup-background").style.display="block";
     document.getElementById("register-popup-wrapper").style.display="flex";
     disableScroll();
 }
 function closeRegisterPopup(){
-    document.getElementById("register-popup-background").style.display="none";
+    document.getElementById("popup-background").style.display="none";
     document.getElementById("register-popup-wrapper").style.display="none";
     enableScroll();
 }
@@ -65,7 +61,7 @@ const simulateSomeAsyncFunction = new Promise((resolve, reject) => {
     const startTime = Date.now();
     setTimeout(() => {
         resolve(Date.now() - startTime);
-    }, 1000);
+    }, 30000);
 });
 
 simulateSomeAsyncFunction.then(msElapsed => {

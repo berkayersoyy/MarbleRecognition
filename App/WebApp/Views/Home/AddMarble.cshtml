@@ -1,0 +1,44 @@
+@model AddMarbleViewModel
+@{
+    ViewBag.Title = "Mermer Ekleme";
+    Layout = "_Layout";
+}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<div class="page-navigator-wrapper">
+    <div class="page-navigator-content">
+        <a href="/marbles" class="page-navigator-text">Anasayfa</a>
+        <svg class="page-navigator-divider" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.81055 5.08453L0.0292969 1.30328L1.10944 0.223145L5.97083 5.08453L1.10944 9.94592L0.0292972 8.86578L3.81055 5.08453Z" fill="#D9DBE9"/>
+        </svg>
+        <p class="page-navigator-text">Mermer Ekle</p>
+    </div>
+</div>
+<form id="add-marble-form" asp-action="AddMarble" asp-controller="Home" method="post" enctype="multipart/form-data">
+    <div class="add-post-wrapper">
+        <div class="add-post-content">
+            <div class="add-post-create-question-wrapper">
+                <div class="add-post-create-question-image-wrapper">
+                    <svg class="add-post-create-question-image" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.76445 11.8472H3.59154L3.45556 11.954L0.861328 13.9922V0.888889C0.861328 0.743365 0.979693 0.625 1.12522 0.625H14.8752C15.0207 0.625 15.1391 0.743364 15.1391 0.888889V11.5833C15.1391 11.7289 15.0207 11.8472 14.8752 11.8472H3.76445ZM14.6113 1.65278V1.15278H14.1113H1.88911H1.38911V1.65278V11.8774V12.9061L2.19799 12.2706L3.40875 11.3194H14.1113H14.6113V10.8194V1.65278ZM8.26411 3.68056V8.79167H7.73633V3.68056H8.26411ZM11.3197 5.20833V8.79167H10.7919V5.20833H11.3197ZM5.20855 6.73611V8.79167H4.68077V6.73611H5.20855Z" fill="white" stroke="#FBFFFF"/>
+                    </svg>
+                </div>
+                <h2 class="add-post-create-question-text">Mermer Ekle</h2><br/>
+                <p class="add-post-create-question-sub-text">Analiz etmek istediğin mermeri Oppio ile incele.<span class="add-post-vivid-color-text">“*” zorunlu alanlar</span></p>
+                <div class="add-post-input-area-wrapper add-post-input-area-wrapper-first">
+                    <h3 class="add-post-input-area-title-text">
+                         Mermerin resmi <span class="add-post-vivid-color-text">*</span> <span class="add-post-input-area-title-sub-text">Herhangi bir resim formatı olabilir.</span>
+                    </h3>
+                    <div class="add-post-input-wrapper">
+                        <input type="file" asp-for="MarbleImageToUpload" required="required">
+                    </div>
+                </div>
+                <span class="error-message" for="add-marble-image" style="margin-bottom: 10px;"></span>
+                <button type="submit" class="add-post-submit-button">
+                    <p class="add-post-submit-button-text">
+                        Mermer ekle
+                    </p>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

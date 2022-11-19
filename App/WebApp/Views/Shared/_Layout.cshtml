@@ -23,10 +23,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/8c3a71541e.js" crossorigin="anonymous"></script>
 </head>
 <body>
 @* REGISTER POPUP *@
-<div id="register-popup-background" class="register-popup-background"></div>
+<div id="popup-background" class="popup-background"></div>
 <div id="register-popup-wrapper" class="register-popup-wrapper">
     <div class="register-popup-right-wrapper">
         <div onclick="closeRegisterPopup()" id="register-popup-close" class="register-popup-close-image-wrapper">
@@ -119,7 +120,7 @@
         <div class="hamburger-menu-logged-in-wrapper">
             <div class="hamburger-menu-user-wrapper">
                 <div class="hamburger-menu-user-avatar-wrapper">
-                    <img src="~/images/avatars/avatar.svg" alt="avatar" class="hamburger-menu-user-avatar">
+                    <img src="~/images/user-svgrepo-com.svg" alt="avatar" class="hamburger-menu-user-avatar">
                 </div>
                 <p class="hamburger-menu-user-nickname">
                     @currentUser.Result.Nickname
@@ -155,17 +156,6 @@
                     </div>
                     <p class="hamburger-menu-logged-in-button-text">
                         Mesajlar
-                    </p>
-                </a>
-                <a href="#" class="hamburger-menu-button-wrapper">
-                    <div class="hamburger-menu-button-image-wrapper">
-                        <svg class="hamburger-menu-button-image" width="9" height="9" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.40307 14.7405L0.361337 15.6389L1.25967 11.5971C0.668063 10.4905 0.359448 9.25477 0.361337 7.99997C0.361337 3.78102 3.78127 0.361084 8.00023 0.361084C12.2192 0.361084 15.6391 3.78102 15.6391 7.99997C15.6391 12.2189 12.2192 15.6389 8.00023 15.6389C6.74543 15.6408 5.50966 15.3321 4.40307 14.7405V14.7405ZM4.6246 13.1264L5.12342 13.3938C6.00842 13.8667 6.99678 14.1132 8.00023 14.1111C9.20889 14.1111 10.3904 13.7527 11.3954 13.0812C12.4003 12.4097 13.1836 11.4553 13.6462 10.3386C14.1087 9.22194 14.2297 7.9932 13.9939 6.80776C13.7581 5.62232 13.1761 4.53342 12.3214 3.67877C11.4668 2.82411 10.3779 2.24208 9.19244 2.00629C8.007 1.77049 6.77826 1.89151 5.66161 2.35404C4.54495 2.81658 3.59052 3.59985 2.91902 4.60482C2.24753 5.60979 1.88911 6.79131 1.88911 7.99997C1.88911 9.019 2.13738 9.99984 2.60717 10.8768L2.87377 11.3756L2.37342 13.6268L4.6246 13.1264V13.1264Z" fill="var(--main-dodger-blue)"/>
-                        </svg>
-
-                    </div>
-                    <p class="hamburger-menu-logged-in-button-text">
-                        Cevapladıklarım
                     </p>
                 </a>
                 <a href="#" class="hamburger-menu-button-wrapper">
@@ -280,7 +270,7 @@
 <header>
     <nav class="nav-header">
         <div class="nav-header-content">
-            <a href="/feed" class="logo-wrapper">
+            <a href="/marbles" class="logo-wrapper">
                         <img alt="logo" class="amblem-logo" src="~/images/logo/oppio-amblem-logo.svg"/>
                         <img alt="logo" class="text-logo" src="~/images/logo/oppio-text-logo.svg"/>
                     </a>
@@ -300,24 +290,12 @@
                     </div>
                     @if (SignInManager.IsSignedIn(User))
                     {
-                        <div class="buttons-logged-in-wrapper">
-                            <div class="logged-in-button-wrapper">
-                                <svg class="logged-in-button-image-wrapper" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="logged-in-button-image" d="M14.1108 11.8197H15.6386V13.3474H0.36084V11.8197H1.88862V6.47244C1.88862 4.85167 2.53247 3.29729 3.67852 2.15123C4.82458 1.00518 6.37896 0.361328 7.99973 0.361328C9.6205 0.361328 11.1749 1.00518 12.3209 2.15123C13.467 3.29729 14.1108 4.85167 14.1108 6.47244V11.8197ZM12.5831 11.8197V6.47244C12.5831 5.25686 12.1002 4.09107 11.2406 3.23153C10.3811 2.37199 9.21531 1.88911 7.99973 1.88911C6.78415 1.88911 5.61836 2.37199 4.75882 3.23153C3.89928 4.09107 3.4164 5.25686 3.4164 6.47244V11.8197H12.5831ZM5.70806 14.8752H10.2914V16.403H5.70806V14.8752Z" fill="#262338"/>
-                                </svg>
-                            </div>
-                            <a href="#" class="logged-in-button-wrapper">
-                                <svg class="logged-in-button-image-wrapper" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="logged-in-button-image" d="M4.40307 14.7405L0.361337 15.6389L1.25967 11.5971C0.668063 10.4905 0.359448 9.25477 0.361337 7.99997C0.361337 3.78102 3.78127 0.361084 8.00023 0.361084C12.2192 0.361084 15.6391 3.78102 15.6391 7.99997C15.6391 12.2189 12.2192 15.6389 8.00023 15.6389C6.74543 15.6408 5.50966 15.3321 4.40307 14.7405ZM4.6246 13.1264L5.12342 13.3938C6.00842 13.8667 6.99678 14.1132 8.00023 14.1111C9.20889 14.1111 10.3904 13.7527 11.3954 13.0812C12.4003 12.4097 13.1836 11.4553 13.6462 10.3386C14.1087 9.22194 14.2297 7.9932 13.9939 6.80776C13.7581 5.62232 13.1761 4.53342 12.3214 3.67877C11.4668 2.82411 10.3779 2.24208 9.19244 2.00629C8.007 1.77049 6.77826 1.89151 5.6616 2.35404C4.54495 2.81658 3.59052 3.59985 2.91902 4.60482C2.24752 5.60979 1.88911 6.79131 1.88911 7.99997C1.88911 9.019 2.13738 9.99984 2.60717 10.8768L2.87377 11.3756L2.37342 13.6268L4.6246 13.1264Z" fill="#1C2436"/>
-                                </svg>
-                            </a>
-                            <div class="logged-in-button-wrapper">
-                                <svg class="logged-in-button-image-wrapper" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="logged-in-button-image" d="M1.38478 11.8196C1.06186 11.2611 0.810842 10.6641 0.637695 10.0427C1.01453 9.85109 1.331 9.55892 1.55209 9.19857C1.77319 8.83822 1.89029 8.42373 1.89045 8.00096C1.89061 7.57819 1.77382 7.16361 1.55299 6.80309C1.33216 6.44258 1.01591 6.15018 0.639223 5.95823C0.984528 4.70965 1.642 3.56952 2.54971 2.64525C2.90422 2.87573 3.3156 3.00363 3.7383 3.0148C4.16101 3.02597 4.57856 2.91997 4.94475 2.70852C5.31094 2.49708 5.61149 2.18844 5.81314 1.81676C6.01479 1.44509 6.10967 1.02487 6.08728 0.602609C7.34167 0.278431 8.65794 0.278957 9.91207 0.604137C9.88988 1.02639 9.98495 1.44655 10.1867 1.81811C10.3886 2.18968 10.6892 2.49818 11.0555 2.70946C11.4217 2.92074 11.8393 3.02657 12.262 3.01524C12.6847 3.00391 13.096 2.87585 13.4504 2.64525C13.8927 3.09594 14.2853 3.60851 14.6153 4.18066C14.9461 4.75282 15.1936 5.34941 15.3624 5.95747C14.9856 6.14913 14.6691 6.4413 14.448 6.80165C14.2269 7.162 14.1098 7.57649 14.1097 7.99926C14.1095 8.42203 14.2263 8.83661 14.4471 9.19712C14.668 9.55764 14.9842 9.85004 15.3609 10.042C15.0156 11.2906 14.3581 12.4307 13.4504 13.355C13.0959 13.1245 12.6845 12.9966 12.2618 12.9854C11.8391 12.9742 11.4216 13.0802 11.0554 13.2917C10.6892 13.5031 10.3886 13.8118 10.187 14.1834C9.98533 14.5551 9.89045 14.9753 9.91283 15.3976C8.65845 15.7218 7.34217 15.7213 6.08804 15.3961C6.11023 14.9738 6.01517 14.5537 5.81336 14.1821C5.61156 13.8105 5.31089 13.502 4.94463 13.2908C4.57837 13.0795 4.16079 12.9736 3.73811 12.985C3.31543 12.9963 2.90412 13.1244 2.54971 13.355C2.09824 12.8943 1.70683 12.3784 1.38478 11.8196ZM5.70839 11.9693C6.52241 12.4388 7.13445 13.1923 7.42714 14.0852C7.80832 14.1211 8.19103 14.1219 8.57221 14.086C8.86509 13.1929 9.47742 12.4394 10.2917 11.97C11.1054 11.4992 12.0643 11.3455 12.9844 11.5384C13.206 11.2268 13.3969 10.8945 13.5558 10.5469C12.929 9.84676 12.5827 8.93985 12.5834 8.00011C12.5834 7.03761 12.9424 6.13851 13.5558 5.4533C13.3958 5.10585 13.204 4.77393 12.9829 4.46178C12.0634 4.65451 11.1051 4.5011 10.2917 4.03094C9.4777 3.56143 8.86566 2.80794 8.57297 1.91497C8.19179 1.87907 7.80908 1.8783 7.4279 1.91421C7.13503 2.8073 6.5227 3.56081 5.70839 4.03018C4.89468 4.50097 3.93577 4.65467 3.01568 4.46178C2.79459 4.77366 2.60328 5.10563 2.44429 5.4533C3.07112 6.15345 3.4174 7.06036 3.41672 8.00011C3.41672 8.96261 3.0577 9.8617 2.44429 10.5469C2.60431 10.8944 2.79609 11.2263 3.01721 11.5384C3.93672 11.3457 4.89501 11.4991 5.70839 11.9693ZM8.00006 10.2918C7.39227 10.2918 6.80937 10.0503 6.3796 9.62056C5.94983 9.19079 5.70839 8.60789 5.70839 8.00011C5.70839 7.39232 5.94983 6.80943 6.3796 6.37965C6.80937 5.94988 7.39227 5.70844 8.00006 5.70844C8.60784 5.70844 9.19074 5.94988 9.62051 6.37965C10.0503 6.80943 10.2917 7.39232 10.2917 8.00011C10.2917 8.60789 10.0503 9.19079 9.62051 9.62056C9.19074 10.0503 8.60784 10.2918 8.00006 10.2918ZM8.00006 8.764C8.20265 8.764 8.39695 8.68352 8.54021 8.54026C8.68346 8.397 8.76395 8.2027 8.76395 8.00011C8.76395 7.79751 8.68346 7.60321 8.54021 7.45996C8.39695 7.3167 8.20265 7.23622 8.00006 7.23622C7.79746 7.23622 7.60316 7.3167 7.45991 7.45996C7.31665 7.60321 7.23617 7.79751 7.23617 8.00011C7.23617 8.2027 7.31665 8.397 7.45991 8.54026C7.60316 8.68352 7.79746 8.764 8.00006 8.764Z" fill="#262338"/>
-                                </svg>
+                        <div class="buttons-logged-in-wrapper" style="width: auto;">
+                            <div class="buttons-wrapper">
+                                <a href="/add-marble" class="login-button">Ekle</a>
                             </div>
                             <a href="#" class="logged-in-avatar-wrapper">
-                                <img src="~/images/avatars/avatar.svg" alt="avatar" class="logged-in-avatar">
+                                <img src="~/images/user-svgrepo-com.svg" alt="avatar" class="logged-in-avatar">
                             </a>
                         </div>
                     }
@@ -342,7 +320,7 @@
                     <img alt="logo" src="~/images/logo/oppio-bottom-amblem-logo.svg"/>
                     <img alt="logo" class="footer-logo-amblem-text" src="~/images/logo/oppio-bottom-text-logo.svg"/>
                 </div>
-                <p class="footer-logo-text">Oppio, farklı düşünceleri öğrenmeyi, onlara alışmayı ve onlarla birlikte yaşamayı amaçlayan sosyal bir platformdur.</p>
+                <p class="footer-logo-text">Oppio, mermeri yapısı ve rengi açısından analizini yapıp kalitesini belirlemeyi amaçlayan ücretsiz bir platformdur.</p>
                 <div class="footer-mail-wrapper">
                     <img alt="mail" src="~/images/mail.svg" class="footer-mail-logo"/>
                     <p class="footer-mail-text">Oppio@oppio.com</p>
@@ -426,7 +404,7 @@
         </div>
         <div class="footer-copyright">
             <div class="footer-divider"></div>
-            <p class="footer-copyright-text">© 2022 Copyright Görkem Güney</p>
+            <p class="footer-copyright-text">© 2022 Copyright</p>
         </div>
         <div class="footer-social-media">
             <a href="#" class="social-media-item-wrapper">
@@ -442,7 +420,6 @@
     </div>
 </footer>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/layout.js"></script>
 @await RenderSectionAsync("Scripts", required: false)
 <script type="text/javascript" src="~/js/hamburgerMenu.js"></script>
 <script type="text/javascript" src="~/js/registerPopup.js"></script>

@@ -50,14 +50,14 @@ public class AuthController : Controller
             return View(model);
         }
 
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("Marbles", "Home");
     }
     [Route("register")]
     public IActionResult Register()
     {
         return View();
     }
-    [Route("register")]
+    [Route("sregisterignup")]
     [HttpPost]
     public async Task<IActionResult> Register(UserRegisterViewModel userRegisterViewModel)
     {
@@ -87,7 +87,39 @@ public class AuthController : Controller
         {
             return RedirectToAction("Login", "Auth");
         }
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("Marbles", "Home");
+    }
+    [HttpPost]
+    public async Task<bool> RegisterPopup(UserRegisterViewModel userRegisterViewModel)
+    {
+        if (!ModelState.IsValid)
+        {
+            return false;
+        }
+        var userRegisterDto = new UserRegisterDto
+        {
+            Email = userRegisterViewModel.Email,
+            Nickname = userRegisterViewModel.Nickname,
+            Password = userRegisterViewModel.Password
+        };
+        var result = await _authService.Register(userRegisterDto);
+        if (!result.Success)
+        {
+            return false;
+        }
+
+        var userLoginDto = new UserLoginDto
+        {
+            Email = userRegisterViewModel.Email,
+            Password = userRegisterViewModel.Password
+        };
+        var loginResult = await _authService.Login(userLoginDto);
+        if (!loginResult.Success)
+        {
+            return false;
+        }
+
+        return true;
     }
     [HttpGet]
     public async Task<bool> CheckUserExistsByEmail(string email)
@@ -113,6 +145,12 @@ public class AuthController : Controller
         return int.Parse(userIdString);
     }
 
+    [HttpGet]
+    public async Task<User?> GetCurrentUser()
+    {
+        return await _authService.GetCurrentUser();
+    }
+    
     public async Task Logout()
     {
         await _authService.Logout();
@@ -143,7 +181,7 @@ public class AuthController : Controller
         _emailService.SendEmail(message);
         return RedirectToAction("ForgotPasswordConfirmation","Auth");
     }
-    [Route("forgot-password-successfully")]
+    [Route("forgot-password-confirmation")]
     public IActionResult ForgotPasswordConfirmation()
     {
         return View();
@@ -181,9 +219,11 @@ public class AuthController : Controller
         {
             return View(resetPasswordViewModel);
         }
+
+        await _userManager.ChangePasswordAsync(user, user.PasswordHash, resetPasswordViewModel.Password);
         return RedirectToAction("ResetPasswordConfirmation","Auth");
     }
-    [Route("reset-password-successfully")]
+    [Route("reset-password-confirmation")]
     public IActionResult ResetPasswordConfirmation()
     {
         return View();

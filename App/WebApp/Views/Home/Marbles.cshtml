@@ -1,0 +1,23 @@
+@model List<Entities.Concrete.Marble>
+
+@{
+    ViewBag.Title = "Mermerler";
+    Layout = "_Layout";
+}
+
+<div class="marbles-wrapper">
+    <div class="marbles-content">
+        @foreach (var item in Model)
+        {
+            <a class="marble-card">
+                <img class="marble-card-img" src="~/marble-images/@item.MarbleImage" alt="Card image cap">
+                <h5 class="marble-card-title">@item.QualityClass</h5>
+                <p class="marble-card-title">Yüzey Kalitesi: @String.Format("{0:0.00}", float.Parse(item.SurfaceQuality))</p>
+                <p class="marble-card-title">Yüzey Sınıfı: @item.Surface</p><br/>
+                <p class="marble-card-title">Yüzey Rengi: @item.Color</p>
+            </a>
+        }
+    </div>
+</div>
+
+
